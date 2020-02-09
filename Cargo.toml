@@ -1,0 +1,26 @@
+[package]
+name = "ruspiro-core"
+authors = ["Andre Borrmann <pspwizard@gmx.de>"]
+version = "0.1.0" # remember to update html_root_url
+description = """
+RusPiRo core crate providing traits and functions usefull accross all RusPiRo realated crates.
+"""
+license = "Apache-2.0"
+repository = "https://github.com/RusPiRo/ruspiro-core/tree/v0.1.0"
+documentation = "https://docs.rs/ruspiro-core/0.1.0"
+readme = "README.md"
+keywords = ["RusPiRo", "baremetal", "raspberrypi"]
+categories = ["no-std", "embedded"]
+edition = "2018"
+
+[badges]
+travis-ci = { repository = "RusPiRo/ruspiro-core", branch = "master" }
+maintenance = { status = "actively-developed" }
+
+[lib]
+
+[dependencies]
+pin-utils = "0.1.0-alpha.4"
+ruspiro-console = { path = "../console", version = "0.3" }
+
+[features]
