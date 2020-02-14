@@ -20,7 +20,7 @@ pub type BoxError = Box<dyn Error + Send>; // + Send + Sync needed ?
 
 /// The generic Error trait. All actual errors implementing this trait also need to implement ``Debug``
 /// and ``Display`` to provide human readable text of the error.
-pub trait Error: Debug + Display {
+pub trait Error: Debug + Display + Send {
     /// the underlaying source of this error, if any. This allows to "stack" errors while keeping
     /// track to it's root cause
     fn source(&self) -> Option<&(dyn Error + 'static)> { None }
